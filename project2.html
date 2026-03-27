@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Report | NITW RecoverHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpeg" href="weblogo.jpg.jpeg?v=6">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+    }
+
+    body { 
+      background-color: #F8F9FA; 
+      color: #1E1B4B; 
+      display: flex; 
+      flex-direction: column; 
+      min-height: 100vh; 
+    }
+
+    .header { 
+      background: #FFFFFF; 
+      padding: 18px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      box-shadow: 0 4px 20px -2px rgba(30, 27, 75, 0.05); 
+    }
+
+    .header-brand { 
+      color: #1E1B4B; 
+      text-decoration: none; 
+      font-size: 22px; 
+      font-weight: 700; 
+    }
+
+    .header-brand span { 
+      color: #4338CA; 
+    }
+
+    .nav-links { 
+      display: flex; 
+      gap: 20px; 
+    }
+
+    .nav-links a { 
+      color: #6B7280; 
+      text-decoration: none; 
+      font-size: 15px; 
+      font-weight: 600; 
+      transition: color 0.2s; 
+    }
+
+    .nav-links a:hover { 
+      color: #4338CA; 
+    }
+
+    .main-content { 
+      flex: 1; 
+      display: flex; 
+      justify-content: center; 
+      padding: 60px 20px; 
+    }
+
+    .form-container { 
+      background: #FFFFFF; 
+      width: 100%; 
+      max-width: 650px; 
+      padding: 50px; 
+      border-radius: 20px; 
+      box-shadow: 0 20px 40px -10px rgba(30, 27, 75, 0.08); 
+      border: 1px solid rgba(224, 231, 255, 0.5); 
+    }
+
+    .form-header { 
+      margin-bottom: 35px; 
+    }
+
+    .form-header h2 { 
+      font-size: 32px; 
+      font-weight: 700; 
+      margin-bottom: 10px; 
+      color: #1E1B4B; 
+    }
+
+    .form-header p { 
+      color: #6B7280; 
+      font-size: 16px; 
+    }
+
+    .form-group { 
+      margin-bottom: 24px; 
+    }
+
+    .form-group label { 
+      display: block; 
+      font-size: 14px; 
+      font-weight: 600; 
+      margin-bottom: 10px; 
+      color: #374151; 
+    }
+
+    .form-group input[type="text"], 
+    .form-group input[type="date"], 
+    .form-group textarea { 
+      width: 100%; 
+      padding: 16px; 
+      border: 2px solid #F3F4F6; 
+      background: #F9FAFB; 
+      border-radius: 12px; 
+      font-size: 15px; 
+      outline: none; 
+      transition: all 0.3s ease; 
+      color: #1E1B4B; 
+    }
+
+    .form-group input:focus, 
+    .form-group textarea:focus { 
+      border-color: #4338CA; 
+      background: #FFFFFF; 
+      box-shadow: 0 0 0 4px rgba(67, 56, 202, 0.1); 
+    }
+
+    .form-group textarea { 
+      height: 120px; 
+      resize: vertical; 
+    }
+
+    .form-group input[type="file"] { 
+      font-size: 14px; 
+      color: #6B7280; 
+      padding: 10px 0; 
+    }
+
+    #preview { 
+      width: 100%; 
+      max-height: 250px; 
+      object-fit: cover; 
+      margin-top: 15px; 
+      border-radius: 12px; 
+      display: none; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    }
+
+    .action-buttons { 
+      display: flex; 
+      gap: 16px; 
+      margin-top: 40px; 
+    }
+
+    .btn { 
+      flex: 1; 
+      padding: 16px; 
+      border-radius: 12px; 
+      font-size: 16px; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s ease; 
+      border: none; 
+      text-align: center; 
+    }
+
+    .btn-submit { 
+      background: #4338CA; 
+      color: white; 
+      box-shadow: 0 4px 12px rgba(67, 56, 202, 0.3); 
+    }
+
+    .btn-submit:hover { 
+      background: #3730A3; 
+      transform: translateY(-2px); 
+      box-shadow: 0 6px 16px rgba(67, 56, 202, 0.4); 
+    }
+
+    .btn-reset { 
+      background: #F3F4F6; 
+      color: #4B5563; 
+    }
+
+    .btn-reset:hover { 
+      background: #E5E7EB; 
+      color: #1F2937; 
+    }
+
+    .footer { 
+      text-align: center; 
+      padding: 30px; 
+      font-size: 14px; 
+      color: #9CA3AF; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="project.html" class="header-brand">NITW <span>RecoverHub</span></a>
+    <div class="nav-links">
+      <a href="project.html">Home</a>
+      <a href="project1.html">Search</a>
+      <a href="project3.html">Guidelines</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="form-container">
+      <div class="form-header">
+        <h2 id="dynamic-title">Log an Item</h2>
+        <p id="dynamic-desc">Enter the details as accurately as possible.</p>
+      </div>
+
+      <div class="form-group">
+        <label>Item Title</label>
+        <input type="text" id="title" placeholder="e.g., Apple AirPods Pro, Mechanical ID">
+      </div>
+
+      <div class="form-group">
+        <label>Detailed Description</label>
+        <textarea id="desc" placeholder="Provide colors, brands, or distinct identifying marks..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Location</label>
+        <input type="text" id="location" placeholder="e.g., Seminar Hall A, Sports Complex">
+      </div>
+
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" id="date">
+      </div>
+
+      <div class="form-group">
+        <label>Contact Details</label>
+        <input type="text" id="contact" placeholder="Phone number or student email">
+      </div>
+
+      <div class="form-group">
+        <label>Upload Image (Optional but highly recommended)</label>
+        <input type="file" id="image" accept="image/*" onchange="previewImage()">
+        <img id="preview" alt="Preview">
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-reset" onclick="resetForm()">Clear</button>
+        <button class="btn btn-submit" onclick="addItem()">Submit Registry File</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Securely processed via NITW RecoverHub Serverless Infrastructure.</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const supabaseClient = supabase.createClient(
+      "https://ibrhzttxagvrerwxmzvt.supabase.co",
+      "sb_publishable_Wz0pO6F7GI8ZEhs_J3WrjQ_D8cegRdP"
+    );
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const reportType = urlParams.get('type') || 'lost';
+    const targetTable = reportType === 'found' ? 'found_items' : 'lost_items';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (reportType === 'found') {
+        document.getElementById('dynamic-title').innerText = "Log a Found Item";
+        document.getElementById('dynamic-desc').innerText = "Thank you for helping! Enter the details of the item you discovered.";
+      } else {
+        document.getElementById('dynamic-title').innerText = "Log a Lost Item";
+        document.getElementById('dynamic-desc').innerText = "Enter the details as accurately as possible to facilitate a swift recovery.";
+      }
+    });
+
+    function previewImage() {
+      const file = document.getElementById("image").files[0];
+      const preview = document.getElementById("preview");
+      if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+      }
+    }
+
+    function resetForm() {
+      document.querySelectorAll("input, textarea").forEach(i => i.value = "");
+      document.getElementById("preview").style.display = "none";
+      document.getElementById("preview").src = "";
+    }
+
+    async function addItem() {
+      const name = document.getElementById("title").value;
+      const description = document.getElementById("desc").value;
+      const location = document.getElementById("location").value;
+      const date = document.getElementById("date").value;
+      const contact = document.getElementById("contact").value;
+
+      if (!name || !description || !location) {
+        alert("Please ensure all required fields are filled.");
+        return;
+      }
+
+      let imageUrl = "";
+      const file = document.getElementById("image").files[0];
+
+      if (file) {
+        const fileName = Date.now() + "_" + file.name.replace(/[^a-zA-Z0-9.]/g, "_");
+
+        const { error: uploadError } = await supabaseClient.storage
+          .from("images")
+          .upload(fileName, file);
+
+        if (uploadError) {
+          alert("Image processing failed. Please try again.");
+          return;
+        }
+
+        imageUrl = supabaseClient.storage
+          .from("images")
+          .getPublicUrl(fileName).data.publicUrl;
+      }
+
+      const dataToInsert = {
+        name,
+        description,
+        location,
+        contact,
+        image: imageUrl
+      };
+      
+      if (reportType === 'found') {
+        dataToInsert.date_found = date;
+      } else {
+        dataToInsert.date_lost = date;
+      }
+
+      const { error } = await supabaseClient
+        .from(targetTable)
+        .insert([dataToInsert]);
+
+      if (error) {
+        alert("System Error: " + error.message);
+      } else {
+        alert("Success. Your report has been officially logged in the " + reportType + " registry.");
+        resetForm();
+      }
+    }
+  </script>
+</body>
+</html>

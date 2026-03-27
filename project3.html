@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About & Guidelines | NITW RecoverHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpeg" href="weblogo.jpg.jpeg?v=6">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+    }
+
+    body { 
+      background-color: #F8F9FA; 
+      color: #1E1B4B; 
+      display: flex; 
+      flex-direction: column; 
+      min-height: 100vh; 
+    }
+
+    .header { 
+      background: #FFFFFF; 
+      padding: 18px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      box-shadow: 0 4px 20px -2px rgba(30, 27, 75, 0.05); 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+    }
+
+    .header-brand { 
+      color: #1E1B4B; 
+      text-decoration: none; 
+      font-size: 22px; 
+      font-weight: 700; 
+    }
+
+    .header-brand span { 
+      color: #4338CA; 
+    }
+
+    .nav-links { 
+      display: flex; 
+      gap: 20px; 
+    }
+
+    .nav-links a { 
+      color: #6B7280; 
+      text-decoration: none; 
+      font-size: 15px; 
+      font-weight: 600; 
+      transition: color 0.2s; 
+    }
+
+    .nav-links a:hover { 
+      color: #4338CA; 
+    }
+
+    .main-content { 
+      flex: 1; 
+      max-width: 900px; 
+      margin: 50px auto; 
+      padding: 0 20px; 
+    }
+
+    .page-header { 
+      text-align: center; 
+      margin-bottom: 50px; 
+    }
+
+    .page-header h1 { 
+      font-size: 40px; 
+      font-weight: 700; 
+      color: #1E1B4B; 
+      margin-bottom: 15px; 
+      letter-spacing: -1px; 
+    }
+
+    .page-header p { 
+      font-size: 18px; 
+      color: #6B7280; 
+      line-height: 1.6; 
+      max-width: 700px; 
+      margin: auto; 
+    }
+
+    .content-card { 
+      background: #FFFFFF; 
+      padding: 50px; 
+      border-radius: 20px; 
+      box-shadow: 0 20px 40px -10px rgba(30, 27, 75, 0.06); 
+      border: 1px solid rgba(224, 231, 255, 0.5); 
+      margin-bottom: 40px; 
+    }
+
+    .section-title { 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #1E1B4B; 
+      margin-bottom: 20px; 
+      display: flex; 
+      align-items: center; 
+      gap: 12px; 
+    }
+
+    .section-title::before { 
+      content: ""; 
+      display: block; 
+      width: 6px; 
+      height: 24px; 
+      background: #4338CA; 
+      border-radius: 4px; 
+    }
+
+    .text-body { 
+      font-size: 16px; 
+      color: #4B5563; 
+      line-height: 1.7; 
+      margin-bottom: 30px; 
+    }
+
+    .grid-2 { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 30px; 
+      margin-bottom: 40px; 
+    }
+
+    .rule-box { 
+      background: #F9FAFB; 
+      padding: 25px; 
+      border-radius: 16px; 
+      border: 1px solid #F3F4F6; 
+      transition: transform 0.3s ease; 
+    }
+
+    .rule-box:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 10px 25px -5px rgba(30, 27, 75, 0.05); 
+      border-color: #E0E7FF; 
+    }
+
+    .rule-box h3 { 
+      font-size: 18px; 
+      color: #1E1B4B; 
+      margin-bottom: 10px; 
+      font-weight: 700; 
+    }
+
+    .rule-box p { 
+      font-size: 14px; 
+      color: #6B7280; 
+      line-height: 1.6; 
+    }
+
+    .location-list { 
+      list-style: none; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 15px; 
+    }
+
+    .location-item { 
+      display: flex; 
+      align-items: center; 
+      gap: 15px; 
+      background: #EEF2FF; 
+      padding: 16px 20px; 
+      border-radius: 12px; 
+      border-left: 4px solid #4338CA; 
+    }
+
+    .location-item strong { 
+      color: #3730A3; 
+      font-size: 16px; 
+    }
+
+    .location-item span { 
+      color: #4F46E5; 
+      font-size: 14px; 
+    }
+
+    .footer { 
+      text-align: center; 
+      padding: 30px; 
+      font-size: 14px; 
+      color: #9CA3AF; 
+      background: #FFFFFF; 
+      border-top: 1px solid #F3F4F6; 
+      margin-top: auto; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="project.html" class="header-brand">NITW <span>RecoverHub</span></a>
+    <div class="nav-links">
+      <a href="project.html">Home</a>
+      <a href="project1.html">Search</a>
+      <a href="project2.html?type=lost">Report</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="page-header">
+      <h1>Campus Guidelines</h1>
+      <p>Learn how the NITW RecoverHub initiative works, the protocol for handling lost items, and official campus drop-off zones.</p>
+    </div>
+
+    <div class="content-card">
+      <h2 class="section-title">About the Initiative</h2>
+      <p class="text-body">
+        Initiated by the Dean of Students Welfare Office, the NITW RecoverHub is designed to be the central repository for all lost and found items within the National Institute of Technology Warangal campus. Our goal is to foster a campus culture of integrity and ensure that valuable electronics, IDs, and personal belongings find their way back to their rightful owners as swiftly as possible.
+      </p>
+
+      <h2 class="section-title">Protocol for Lost & Found</h2>
+        
+      <div class="grid-2">
+        <div class="rule-box">
+          <h3>If you LOST something:</h3>
+          <p>1. Check the Search Registry immediately.<br>
+             2. If not found, log a detailed Lost Report.<br>
+             3. Provide distinct identifying marks in your description.<br>
+             4. Check your institutional email regularly for updates.</p>
+        </div>
+            
+        <div class="rule-box">
+          <h3>If you FOUND something:</h3>
+          <p>1. Do not leave the item unattended.<br>
+             2. Log the item in the RecoverHub Registry.<br>
+             3. If it contains sensitive data, turn it in to an official drop-off zone immediately.<br>
+             4. Do not hand it over to unverified individuals.</p>
+        </div>
+      </div>
+
+      <h2 class="section-title">Official Drop-Off Zones</h2>
+      <p class="text-body">If you prefer not to hold onto a found item, or if the item is of high value, please surrender it to any of the following authorized campus locations:</p>
+        
+      <ul class="location-list">
+        <li class="location-item">
+          <strong>Student Activity Centre (SAC)</strong>
+          <span>Main Administrative Desk</span>
+        </li>
+        <li class="location-item">
+          <strong>Central Library</strong>
+          <span>Front Circulation & Security Desk</span>
+        </li>
+        <li class="location-item">
+          <strong>Main Campus Security</strong>
+          <span>Gate 1 Security Checkpoint</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">NITW RecoverHub © 2026. Dean of Students Welfare Office.</div>
+
+</body>
+</html>

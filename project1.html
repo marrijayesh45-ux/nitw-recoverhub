@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NITW RecoverHub | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpeg" href="weblogo.jpg.jpeg?v=6">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+    }
+
+    body { 
+      background-color: #F8F9FA; 
+      color: #1E1B4B; 
+    }
+
+    .top-banner { 
+      background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%); 
+      color: #E0E7FF; 
+      padding: 10px 20px; 
+      font-size: 13px; 
+      font-weight: 600; 
+      text-align: center; 
+      letter-spacing: 0.5px; 
+    }
+
+    header { 
+      background: rgba(255, 255, 255, 0.95); 
+      backdrop-filter: blur(10px); 
+      padding: 18px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      box-shadow: 0 4px 20px -2px rgba(30, 27, 75, 0.05); 
+    }
+
+    .brand-container { 
+      display: flex; 
+      align-items: center; 
+      gap: 14px; 
+      text-decoration: none; 
+    }
+
+    .brand-logo { 
+      height: 42px; 
+      width: auto; 
+      border-radius: 8px; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+    }
+
+    .brand { 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #1E1B4B; 
+      letter-spacing: -0.5px; 
+    }
+
+    .brand span { 
+      color: #4338CA; 
+    }
+
+    .nav-links { 
+      display: flex; 
+      gap: 20px; 
+    }
+
+    .nav-links a { 
+      color: #6B7280; 
+      text-decoration: none; 
+      font-size: 15px; 
+      font-weight: 600; 
+      transition: color 0.2s; 
+    }
+
+    .nav-links a:hover { 
+      color: #4338CA; 
+    }
+
+    .hero { 
+      height: 60vh; 
+      background: linear-gradient(to right, rgba(30, 27, 75, 0.85), rgba(67, 56, 202, 0.7)), url('nitw.jpg') center/cover no-repeat; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center; 
+      color: white; 
+      padding: 0 20px; 
+    }
+
+    .hero h1 { 
+      font-size: 52px; 
+      font-weight: 700; 
+      margin-bottom: 20px; 
+      letter-spacing: -1px; 
+      text-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+    }
+
+    .hero p { 
+      font-size: 19px; 
+      max-width: 700px; 
+      line-height: 1.6; 
+      color: #E0E7FF; 
+      font-weight: 400; 
+    }
+
+    .container { 
+      max-width: 1100px; 
+      margin: -70px auto 60px; 
+      padding: 0 20px; 
+      position: relative; 
+      z-index: 10; 
+    }
+
+    .services-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 30px; 
+    }
+
+    .service-card { 
+      background: #FFFFFF; 
+      padding: 40px 35px; 
+      border-radius: 16px; 
+      box-shadow: 0 10px 40px -10px rgba(30, 27, 75, 0.08); 
+      text-align: left; 
+      cursor: pointer; 
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+      text-decoration: none; 
+      display: block; 
+      color: #1E1B4B; 
+      border: 1px solid rgba(224, 231, 255, 0.5); 
+      position: relative; 
+      overflow: hidden; 
+    }
+
+    .service-card::before { 
+      content: ""; 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 4px; 
+      background: #4338CA; 
+      transform: scaleX(0); 
+      transform-origin: left; 
+      transition: transform 0.4s ease; 
+    }
+
+    .service-card:hover { 
+      transform: translateY(-8px); 
+      box-shadow: 0 20px 40px -10px rgba(67, 56, 202, 0.15); 
+    }
+
+    .service-card:hover::before { 
+      transform: scaleX(1); 
+    }
+
+    .icon-wrapper { 
+      width: 48px; 
+      height: 48px; 
+      background: #EEF2FF; 
+      border-radius: 12px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      margin-bottom: 20px; 
+      font-size: 24px; 
+      color: #4338CA; 
+    }
+
+    .service-card h3 { 
+      font-size: 22px; 
+      margin-bottom: 12px; 
+      font-weight: 700; 
+    }
+
+    .service-card p { 
+      font-size: 15px; 
+      color: #6B7280; 
+      line-height: 1.6; 
+    }
+
+    footer { 
+      text-align: center; 
+      padding: 40px 20px; 
+      color: #6B7280; 
+      font-size: 14px; 
+      background: #FFFFFF; 
+      border-top: 1px solid #F3F4F6; 
+    }
+
+    footer strong { 
+      color: #1E1B4B; 
+      font-size: 16px; 
+      display: block; 
+      margin-bottom: 8px; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-banner">Official Portal • Dean of Students Welfare Office</div>
+
+  <header>
+    <a href="project.html" class="brand-container">
+      <img src="weblogo.jpg.jpeg" alt="NITW Logo" class="brand-logo">
+      <div class="brand">NITW <span>RecoverHub</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="project1.html">Search</a>
+      <a href="project3.html">Guidelines</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Lost it? Let's find it.</h1>
+    <p>The smartest, most secure way for NITW students and faculty to reunite with their lost belongings across the campus.</p>
+  </section>
+
+  <main class="container">
+    <div class="services-grid">
+      <a href="project2.html?type=lost" class="service-card">
+        <div class="icon-wrapper">📢</div>
+        <h3>Report Lost Item</h3>
+        <p>File a comprehensive report for an item you have lost to instantly alert the campus community.</p>
+      </a>
+      <a href="project2.html?type=found" class="service-card">
+        <div class="icon-wrapper">🤝</div>
+        <h3>Report Found Item</h3>
+        <p>Be a hero. Register an item you have discovered so it can be returned to its rightful owner.</p>
+      </a>
+      <a href="project1.html" class="service-card">
+        <div class="icon-wrapper">🔍</div>
+        <h3>Search Registry</h3>
+        <p>Instantly scan our real-time database to see if your missing item has already been secured.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <strong>NITW RecoverHub © 2026</strong>
+    <p>Contact: nitw.lostfound@gmail.com</p>
+  </footer>
+
+</body>
+</html>
