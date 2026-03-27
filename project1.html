@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NITW RecoverHub | Home</title>
+  <title>Search | NITW RecoverHub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/jpeg" href="weblogo.jpg.jpeg?v=6">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,55 +15,27 @@
     }
 
     body { 
-      background-color: #F8F9FA; 
+      background: #F8F9FA; 
       color: #1E1B4B; 
     }
 
-    .top-banner { 
-      background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%); 
-      color: #E0E7FF; 
-      padding: 10px 20px; 
-      font-size: 13px; 
-      font-weight: 600; 
-      text-align: center; 
-      letter-spacing: 0.5px; 
-    }
-
-    header { 
-      background: rgba(255, 255, 255, 0.95); 
-      backdrop-filter: blur(10px); 
+    .header { 
+      background: #FFFFFF; 
       padding: 18px 40px; 
       display: flex; 
       justify-content: space-between; 
       align-items: center; 
-      position: sticky; 
-      top: 0; 
-      z-index: 100; 
       box-shadow: 0 4px 20px -2px rgba(30, 27, 75, 0.05); 
     }
 
-    .brand-container { 
-      display: flex; 
-      align-items: center; 
-      gap: 14px; 
-      text-decoration: none; 
-    }
-
-    .brand-logo { 
-      height: 42px; 
-      width: auto; 
-      border-radius: 8px; 
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-    }
-
-    .brand { 
-      font-size: 24px; 
-      font-weight: 700; 
+    .header-brand { 
       color: #1E1B4B; 
-      letter-spacing: -0.5px; 
+      text-decoration: none; 
+      font-size: 22px; 
+      font-weight: 700; 
     }
 
-    .brand span { 
+    .header-brand span { 
       color: #4338CA; 
     }
 
@@ -84,172 +56,251 @@
       color: #4338CA; 
     }
 
-    .hero { 
-      height: 60vh; 
-      background: linear-gradient(to right, rgba(30, 27, 75, 0.85), rgba(67, 56, 202, 0.7)), url('nitw.jpg') center/cover no-repeat; 
-      display: flex; 
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      text-align: center; 
-      color: white; 
-      padding: 0 20px; 
-    }
-
-    .hero h1 { 
-      font-size: 52px; 
-      font-weight: 700; 
-      margin-bottom: 20px; 
-      letter-spacing: -1px; 
-      text-shadow: 0 4px 12px rgba(0,0,0,0.2); 
-    }
-
-    .hero p { 
-      font-size: 19px; 
-      max-width: 700px; 
-      line-height: 1.6; 
-      color: #E0E7FF; 
-      font-weight: 400; 
-    }
-
     .container { 
-      max-width: 1100px; 
-      margin: -70px auto 60px; 
+      max-width: 900px; 
+      margin: 50px auto; 
       padding: 0 20px; 
-      position: relative; 
-      z-index: 10; 
     }
 
-    .services-grid { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-      gap: 30px; 
+    .search-header { 
+      text-align: center; 
+      margin-bottom: 40px; 
     }
 
-    .service-card { 
-      background: #FFFFFF; 
-      padding: 40px 35px; 
-      border-radius: 16px; 
-      box-shadow: 0 10px 40px -10px rgba(30, 27, 75, 0.08); 
-      text-align: left; 
-      cursor: pointer; 
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-      text-decoration: none; 
-      display: block; 
+    .search-header h2 { 
+      font-size: 36px; 
       color: #1E1B4B; 
-      border: 1px solid rgba(224, 231, 255, 0.5); 
-      position: relative; 
-      overflow: hidden; 
+      margin-bottom: 12px; 
     }
 
-    .service-card::before { 
-      content: ""; 
-      position: absolute; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: 4px; 
-      background: #4338CA; 
-      transform: scaleX(0); 
-      transform-origin: left; 
-      transition: transform 0.4s ease; 
+    .search-header p { 
+      color: #6B7280; 
+      font-size: 16px; 
     }
 
-    .service-card:hover { 
-      transform: translateY(-8px); 
-      box-shadow: 0 20px 40px -10px rgba(67, 56, 202, 0.15); 
-    }
-
-    .service-card:hover::before { 
-      transform: scaleX(1); 
-    }
-
-    .icon-wrapper { 
-      width: 48px; 
-      height: 48px; 
-      background: #EEF2FF; 
-      border-radius: 12px; 
+    .search-box { 
+      background: #FFFFFF; 
+      padding: 10px; 
+      border-radius: 16px; 
+      box-shadow: 0 10px 30px -5px rgba(30, 27, 75, 0.08); 
       display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      margin-bottom: 20px; 
-      font-size: 24px; 
-      color: #4338CA; 
+      gap: 10px; 
+      margin-bottom: 30px; 
+      border: 1px solid rgba(224, 231, 255, 0.8); 
     }
 
-    .service-card h3 { 
-      font-size: 22px; 
+    .search-input { 
+      flex: 1; 
+      padding: 16px 20px; 
+      border: none; 
+      background: transparent; 
+      font-size: 16px; 
+      outline: none; 
+      color: #1E1B4B; 
+    }
+
+    .btn { 
+      padding: 16px 28px; 
+      border-radius: 12px; 
+      font-weight: 600; 
+      font-size: 15px; 
+      cursor: pointer; 
+      transition: all 0.3s ease; 
+      border: none; 
+    }
+
+    .btn-lost { 
+      background: #FEF3C7; 
+      color: #B45309; 
+    }
+
+    .btn-lost:hover { 
+      background: #FDE68A; 
+    }
+
+    .btn-found { 
+      background: #4338CA; 
+      color: #FFFFFF; 
+    }
+
+    .btn-found:hover { 
+      background: #3730A3; 
+    }
+
+    .status { 
+      font-size: 15px; 
+      color: #6B7280; 
+      margin-bottom: 25px; 
+      font-weight: 500; 
+    }
+
+    .grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+      gap: 25px; 
+    }
+
+    .card { 
+      background: #FFFFFF; 
+      border-radius: 16px; 
+      overflow: hidden; 
+      box-shadow: 0 4px 15px rgba(30, 27, 75, 0.04); 
+      transition: transform 0.3s ease; 
+      border: 1px solid #F3F4F6; 
+    }
+
+    .card:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 12px 25px rgba(30, 27, 75, 0.08); 
+    }
+
+    .card img { 
+      width: 100%; 
+      height: 180px; 
+      object-fit: cover; 
+      background: #EEF2FF; 
+    }
+
+    .card-content { 
+      padding: 24px; 
+    }
+
+    .card-content h3 { 
+      font-size: 18px; 
+      color: #1E1B4B; 
       margin-bottom: 12px; 
       font-weight: 700; 
     }
 
-    .service-card p { 
-      font-size: 15px; 
-      color: #6B7280; 
-      line-height: 1.6; 
-    }
-
-    footer { 
-      text-align: center; 
-      padding: 40px 20px; 
-      color: #6B7280; 
+    .card-content p { 
       font-size: 14px; 
-      background: #FFFFFF; 
-      border-top: 1px solid #F3F4F6; 
+      color: #4B5563; 
+      margin-bottom: 8px; 
+      line-height: 1.5; 
     }
 
-    footer strong { 
-      color: #1E1B4B; 
-      font-size: 16px; 
-      display: block; 
-      margin-bottom: 8px; 
+    .card-content strong { 
+      color: #111827; 
+      font-weight: 600; 
+    }
+
+    .badge { 
+      display: inline-block; 
+      padding: 4px 10px; 
+      border-radius: 6px; 
+      font-size: 12px; 
+      font-weight: 700; 
+      margin-bottom: 12px; 
+      text-transform: uppercase; 
+      letter-spacing: 0.5px; 
+    }
+
+    .badge-lost { 
+      background: #FEE2E2; 
+      color: #991B1B; 
+    }
+
+    .badge-found { 
+      background: #E0E7FF; 
+      color: #3730A3; 
     }
   </style>
 </head>
 <body>
 
-  <div class="top-banner">Official Portal • Dean of Students Welfare Office</div>
-
-  <header>
-    <a href="index.html" class="brand-container">
-      <img src="weblogo.jpg.jpeg" alt="NITW Logo" class="brand-logo">
-      <div class="brand">NITW <span>RecoverHub</span></div>
-    </a>
+  <div class="header">
+    <a href="index.html" class="header-brand">NITW <span>RecoverHub</span></a>
     <div class="nav-links">
-      <a href="project1.html">Search</a>
+      <a href="index.html">Home</a>
+      <a href="project2.html?type=lost">Report</a>
       <a href="project3.html">Guidelines</a>
     </div>
-  </header>
+  </div>
 
-  <section class="hero">
-    <h1>Lost it? Let's find it.</h1>
-    <p>The smartest, most secure way for NITW students and faculty to reunite with their lost belongings across the campus.</p>
-  </section>
-
-  <main class="container">
-    <div class="services-grid">
-      <a href="project2.html?type=lost" class="service-card">
-        <div class="icon-wrapper">📢</div>
-        <h3>Report Lost Item</h3>
-        <p>File a comprehensive report for an item you have lost to instantly alert the campus community.</p>
-      </a>
-      <a href="project2.html?type=found" class="service-card">
-        <div class="icon-wrapper">🤝</div>
-        <h3>Report Found Item</h3>
-        <p>Be a hero. Register an item you have discovered so it can be returned to its rightful owner.</p>
-      </a>
-      <a href="project1.html" class="service-card">
-        <div class="icon-wrapper">🔍</div>
-        <h3>Search Registry</h3>
-        <p>Instantly scan our real-time database to see if your missing item has already been secured.</p>
-      </a>
+  <div class="container">
+    <div class="search-header">
+      <h2>Campus Registry</h2>
+      <p>Search by keyword, item type, or brand to locate belongings.</p>
     </div>
-  </main>
 
-  <footer>
-    <strong>NITW RecoverHub © 2026</strong>
-    <p>Contact: nitw.lostfound@gmail.com</p>
-  </footer>
+    <div class="search-box">
+      <input type="text" id="searchInput" class="search-input" placeholder="e.g., iPhone 13, Library Card, Blue Backpack...">
+      <button class="btn btn-lost" onclick="searchLost()">Find Lost</button>
+      <button class="btn btn-found" onclick="searchFound()">Find Found</button>
+    </div>
 
+    <div id="status" class="status"></div>
+    <div id="results" class="grid"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const supabaseClient = supabase.createClient(
+      "https://ibrhzttxagvrerwxmzvt.supabase.co",
+      "sb_publishable_Wz0pO6F7GI8ZEhs_J3WrjQ_D8cegRdP"
+    );
+
+    async function searchLost() { 
+      runSearch("lost_items", "Lost"); 
+    }
+
+    async function searchFound() { 
+      runSearch("found_items", "Found"); 
+    }
+
+    async function runSearch(table, type) {
+      const query = document.getElementById("searchInput").value.trim();
+      const resultsDiv = document.getElementById("results");
+      const status = document.getElementById("status");
+
+      resultsDiv.innerHTML = "";
+      status.innerText = "Scanning registry...";
+
+      if (query === "") {
+        status.innerText = "Please enter a search term to begin.";
+        return;
+      }
+
+      const { data } = await supabaseClient
+        .from(table)
+        .select("*")
+        .ilike("name", "%" + query + "%");
+
+      if (!data || data.length === 0) {
+        status.innerText = "No matching records found in the database at this time.";
+        return;
+      }
+
+      status.innerText = `${data.length} item(s) retrieved.`;
+
+      let html = "";
+      const badgeClass = type === "Lost" ? "badge-lost" : "badge-found";
+
+      data.forEach(item => {
+        const imageUrl = item.image || 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%22280%22 height%3D%22180%22 viewBox%3D%220 0 280 180%22%3E%3Crect fill%3D%22%23EEF2FF%22 width%3D%22280%22 height%3D%22180%22%2F%3E%3Ctext fill%3D%22%23A5B4FC%22 font-family%3D%22sans-serif%22 font-size%3D%2214%22 dy%3D%225.25%22 font-weight%3D%22bold%22 x%3D%2250%25%22 y%3D%2250%25%22 text-anchor%3D%22middle%22%3ENo Image Uploaded%3C%2Ftext%3E%3C%2Fsvg%3E';
+        html += `
+        <div class="card">
+          <img src="${imageUrl}" alt="Item Image">
+          <div class="card-content">
+            <span class="badge ${badgeClass}">${type}</span>
+            <h3>${item.name}</h3>
+            <p><strong>Location:</strong> ${item.location}</p>
+            <p><strong>Date:</strong> ${item.date_lost || item.date_found}</p>
+            <p><strong>Details:</strong> ${item.description}</p>
+            <p><strong>Contact:</strong> ${item.contact}</p>
+          </div>
+        </div>
+        `;
+      });
+      
+      resultsDiv.innerHTML = html;
+    }
+
+    document.getElementById("searchInput").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        searchLost();
+      }
+    });
+  </script>
 </body>
 </html>
